@@ -248,12 +248,11 @@ window.I18N = {
  * Impressum und Datenschutz (nur Deutsch, wird in allen Sprachen angezeigt).
  * Jeder Abschnitt hat eine Überschrift (h) und Absätze (p).
  * In den Absätzen ist einfaches HTML erlaubt, z. B. <br> oder <a href="...">.
- * WICHTIG: Die Platzhalter in <mark>...</mark> durch deine echte Anschrift ersetzen.
  */
 window.LEGAL = {
   impressum: [
     { h: 'Angaben gemäß § 5 DDG', p: [
-      'Mohamad Noor Ghazal<br><mark>[Straße und Hausnummer]</mark><br><mark>[Postleitzahl]</mark> Oldenburg<br>Deutschland'
+      'Mohamad Noor Ghazal<br>Adelheidstr. 16<br>26123 Oldenburg<br>Deutschland'
     ]},
     { h: 'Kontakt', p: [
       'Telefon: <a href="tel:+4915906815359" dir="ltr">+49 1590 6815359</a><br>E-Mail: <a href="mailto:mohamad.noor.ghazal@gmail.com">mohamad.noor.ghazal@gmail.com</a>'
@@ -271,7 +270,7 @@ window.LEGAL = {
   ],
   datenschutz: [
     { h: '1. Verantwortlicher', p: [
-      'Mohamad Noor Ghazal<br><mark>[Straße und Hausnummer]</mark><br><mark>[Postleitzahl]</mark> Oldenburg<br>Deutschland<br>E-Mail: <a href="mailto:mohamad.noor.ghazal@gmail.com">mohamad.noor.ghazal@gmail.com</a><br>Telefon: <a href="tel:+4915906815359" dir="ltr">+49 1590 6815359</a>'
+      'Mohamad Noor Ghazal<br>Adelheidstr. 16<br>26123 Oldenburg<br>Deutschland<br>E-Mail: <a href="mailto:mohamad.noor.ghazal@gmail.com">mohamad.noor.ghazal@gmail.com</a><br>Telefon: <a href="tel:+4915906815359" dir="ltr">+49 1590 6815359</a>'
     ]},
     { h: '2. Überblick', p: [
       'Diese Website ist ein persönliches Portfolio. Sie verwendet keine Cookies, kein Tracking, keine Analysewerkzeuge und keine eingebetteten Inhalte von Drittanbietern. Schriften und Icons werden vom selben Server geladen wie die Website. Die gewählte Sprache wird nur in der Adresse der Seite übertragen und nicht in Ihrem Browser gespeichert.'

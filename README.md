@@ -7,8 +7,8 @@ Es gibt keine externen Dienste, kein Tracking und keine Cookies. Schriften und I
 
 ```
 index.html            Startseite
-impressum.html        Impressum (Platzhalter)
-datenschutz.html      Datenschutz (Platzhalter)
+impressum.html        Impressum
+datenschutz.html      Datenschutz
 assets/js/i18n.js     ALLE Texte in Deutsch (de), Englisch (en) und Arabisch (ar)
 assets/js/main.js     Aufbau der Seite, Sprachumschalter, Menü, Detail-Dialoge, Animationen
 assets/css/style.css  Gestaltung (Glas-Optik, Aurora-Hintergrund, Layout)
@@ -30,9 +30,7 @@ E-Mail, Telefon und LinkedIn stehen direkt in `assets/js/main.js` (nach `mailto:
 Die Kennzahlen (6, 2, 1000, 18) stehen dort unter `METRICS`.
 
 Impressum und Datenschutz: Die Texte stehen ganz unten in `assets/js/i18n.js` unter `window.LEGAL`
-(nur Deutsch, sie werden in allen Sprachen angezeigt). Die gelb markierten Platzhalter
-`<mark>[Straße und Hausnummer]</mark>` und `<mark>[Postleitzahl]</mark>` durch die echte Anschrift ersetzen
-und dabei die `<mark>`-Tags entfernen.
+(nur Deutsch, sie werden in allen Sprachen angezeigt). Bei einem Umzug die Anschrift dort an beiden Stellen ändern.
 
 ## Profilfoto ändern
 
