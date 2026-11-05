@@ -1,0 +1,19 @@
+# Betriebssystem und Editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Werkzeuge
+node_modules/
+.lighthouseci/
+*.log
+
+# Private oder große Originaldateien nicht veröffentlichen
+*.pdf
+*.psd
+*.zip
+originale/
+backup/
+.env
