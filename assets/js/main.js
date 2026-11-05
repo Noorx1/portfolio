@@ -92,8 +92,8 @@
     return '<footer class="site-footer"><div class="footer-in">' +
       '<span>' + esc(t.copyright) + '</span>' +
       '<div class="footer-links">' +
-        '<a href="impressum.html' + langQuery() + '" title="' + esc(t.phNote) + '"' + (PAGE === 'impressum' ? ' aria-current="page"' : '') + '>' + esc(t.imprint) + '</a>' +
-        '<a href="datenschutz.html' + langQuery() + '" title="' + esc(t.phNote) + '"' + (PAGE === 'datenschutz' ? ' aria-current="page"' : '') + '>' + esc(t.privacy) + '</a>' +
+        '<a href="impressum.html' + langQuery() + '"' + (PAGE === 'impressum' ? ' aria-current="page"' : '') + '>' + esc(t.imprint) + '</a>' +
+        '<a href="datenschutz.html' + langQuery() + '"' + (PAGE === 'datenschutz' ? ' aria-current="page"' : '') + '>' + esc(t.privacy) + '</a>' +
       '</div></div></footer>';
   }
 
@@ -316,7 +316,11 @@
     var title = PAGE === 'impressum' ? t.imprint : t.privacy;
     return '<main id="top" tabindex="-1" class="legal-wrap"><section class="legal"><div class="legal-card">' +
       '<h1>' + esc(title) + '</h1>' +
-      '<div class="placeholder" role="note"><strong>' + esc(t.phTitle) + '</strong><p>' + esc(t.phText) + '</p></div>' +
+      (t.legalNote ? '<p class="legal-note">' + esc(t.legalNote) + '</p>' : '') +
+      /* Rechtstexte aus window.LEGAL (i18n.js), immer Deutsch und links nach rechts */
+      '<div class="legal-body" lang="de" dir="ltr">' + (window.LEGAL[PAGE] || []).map(function (s) {
+        return '<section><h2>' + esc(s.h) + '</h2>' + s.p.map(function (p) { return '<p>' + p + '</p>'; }).join('') + '</section>';
+      }).join('') + '</div>' +
       '<div><a class="btn btn-ghost" href="index.html' + langQuery() + '">' + ic(rtl() ? 'arrow-right' : 'arrow-left') + esc(t.home) + '</a></div>' +
     '</div></section></main>';
   }

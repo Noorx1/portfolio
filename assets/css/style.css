@@ -491,8 +491,8 @@ section[id], main[id] { scroll-margin-top: 84px; }
   font-size: 14px; color: rgba(234,242,250,.8);
 }
 .footer-links { display: flex; gap: 20px; }
-.footer-links a { display: inline-flex; align-items: center; min-height: 44px; color: #F8D597; text-decoration: underline dashed; text-underline-offset: 4px; }
-.footer-links a:hover { color: #fff; }
+.footer-links a { display: inline-flex; align-items: center; min-height: 44px; color: rgba(234,242,250,.8); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(147,204,244,.5); }
+.footer-links a:hover, .footer-links a[aria-current="page"] { color: #fff; }
 
 /* ---------- Projekt-Details (Dialog) ---------- */
 .dlg-layer { position: fixed; inset: 0; z-index: 40; overflow-y: auto; overscroll-behavior: contain; padding: 24px clamp(10px, 3vw, 40px); }
@@ -557,12 +557,14 @@ section[id], main[id] { scroll-margin-top: 84px; }
   box-shadow: 0 30px 70px rgba(2,8,20,.4); display: flex; flex-direction: column; gap: 24px;
 }
 .legal-card h1 { font-size: clamp(30px, 4vw, 52px); line-height: 1.15; letter-spacing: var(--ls-tight); font-weight: 800; color: #fff; }
-.placeholder {
-  padding: 18px 20px; border-radius: 18px; border: 2px dashed #F8D597; background: rgba(248,213,151,.08);
-  color: #FCE7C0; display: flex; flex-direction: column; gap: 6px;
-}
-.placeholder strong { color: #F8D597; font-size: 13px; letter-spacing: var(--ls-wide); }
-.placeholder p { margin: 0; font-size: 16px; line-height: 1.6; }
+.legal-note { margin: 0; font-size: 15px; color: var(--muted); }
+.legal-body { display: flex; flex-direction: column; gap: 28px; text-align: left; }
+.legal-body section { display: flex; flex-direction: column; gap: 10px; }
+.legal-body h2 { font-size: 18px; line-height: 1.35; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+.legal-body p { margin: 0; font-size: 16px; line-height: 1.7; color: rgba(234,242,250,.88); overflow-wrap: anywhere; }
+.legal-body a { color: var(--accent); }
+.legal-body a:hover { color: #fff; }
+.legal-body mark { background: rgba(248,213,151,.16); color: #F8D597; border: 1px dashed #F8D597; border-radius: 6px; padding: 0 6px; }
 
 /* ---------- Mobil ---------- */
 @media (max-width: 959.98px) {

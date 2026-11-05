@@ -29,9 +29,10 @@ Alle Texte stehen in `assets/js/i18n.js`, getrennt nach `de`, `en` und `ar`.
 E-Mail, Telefon und LinkedIn stehen direkt in `assets/js/main.js` (nach `mailto:`, `tel:` und `linkedin.com` suchen).
 Die Kennzahlen (6, 2, 1000, 18) stehen dort unter `METRICS`.
 
-Impressum und Datenschutz: Die Platzhalter-Texte heißen `phTitle` und `phText` in `i18n.js`.
-Den richtigen Inhalt am besten direkt in `impressum.html` bzw. `datenschutz.html` einfügen
-oder in `main.js` die Funktion `legalMain` anpassen.
+Impressum und Datenschutz: Die Texte stehen ganz unten in `assets/js/i18n.js` unter `window.LEGAL`
+(nur Deutsch, sie werden in allen Sprachen angezeigt). Die gelb markierten Platzhalter
+`<mark>[Straße und Hausnummer]</mark>` und `<mark>[Postleitzahl]</mark>` durch die echte Anschrift ersetzen
+und dabei die `<mark>`-Tags entfernen.
 
 ## Profilfoto ändern
 

@@ -82,7 +82,7 @@ window.I18N = {
     },
     codeReviews:'Code-Reviews',
     // Zusätzliche Texte für die Website (Sprunglink, Impressum- und Datenschutz-Seiten)
-    skip:'Zum Inhalt springen', home:'Zur Startseite', phTitle:'Platzhalter', phText:'Dieser Inhalt wird noch ergänzt.'
+    skip:'Zum Inhalt springen', home:'Zur Startseite', legalNote:''
   },
   en: {
     navLabel:'Main navigation', langLabel:'Language', menu:'Menu',
@@ -161,7 +161,7 @@ window.I18N = {
         tech:['Raspberry Pi','Pi-hole','DNS','ESP32','Infrared','NFC','Alexa','Spotify','Kali Linux']}
     },
     codeReviews:'Code reviews',
-    skip:'Skip to content', home:'Back to the homepage', phTitle:'Placeholder', phText:'This content will be added soon.'
+    skip:'Skip to content', home:'Back to the homepage', legalNote:'This legal text is only available in German.'
   },
   ar: {
     navLabel:'التنقل الرئيسي', langLabel:'اللغة', menu:'القائمة',
@@ -240,6 +240,58 @@ window.I18N = {
         tech:['Raspberry Pi','Pi-hole','DNS','ESP32','أشعة تحت الحمراء','NFC','Alexa','Spotify','Kali Linux']}
     },
     codeReviews:'مراجعة الشيفرة',
-    skip:'الانتقال إلى المحتوى', home:'العودة إلى الصفحة الرئيسية', phTitle:'عنصر نائب', phText:'سيُضاف هذا المحتوى لاحقًا.'
+    skip:'الانتقال إلى المحتوى', home:'العودة إلى الصفحة الرئيسية', legalNote:'هذا النص القانوني متوفر باللغة الألمانية فقط.'
   }
+};
+
+/*
+ * Impressum und Datenschutz (nur Deutsch, wird in allen Sprachen angezeigt).
+ * Jeder Abschnitt hat eine Überschrift (h) und Absätze (p).
+ * In den Absätzen ist einfaches HTML erlaubt, z. B. <br> oder <a href="...">.
+ * WICHTIG: Die Platzhalter in <mark>...</mark> durch deine echte Anschrift ersetzen.
+ */
+window.LEGAL = {
+  impressum: [
+    { h: 'Angaben gemäß § 5 DDG', p: [
+      'Mohamad Noor Ghazal<br><mark>[Straße und Hausnummer]</mark><br><mark>[Postleitzahl]</mark> Oldenburg<br>Deutschland'
+    ]},
+    { h: 'Kontakt', p: [
+      'Telefon: <a href="tel:+4915906815359" dir="ltr">+49 1590 6815359</a><br>E-Mail: <a href="mailto:mohamad.noor.ghazal@gmail.com">mohamad.noor.ghazal@gmail.com</a>'
+    ]},
+    { h: 'Haftung für Inhalte', p: [
+      'Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann ich jedoch keine Gewähr übernehmen.'
+    ]},
+    { h: 'Haftung für Links', p: [
+      'Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für diese fremden Inhalte ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Sollten mir Rechtsverletzungen bekannt werden, entferne ich die betreffenden Links umgehend.'
+    ]},
+    { h: 'Urheberrecht', p: [
+      'Die Texte und Bilder dieser Website, insbesondere das Profilfoto, unterliegen dem deutschen Urheberrecht. Eine Verwendung außerhalb der Grenzen des Urheberrechts bedarf meiner vorherigen schriftlichen Zustimmung.',
+      'Verwendete Schriften und Icons: Plus Jakarta Sans und IBM Plex Sans Arabic (SIL Open Font License) sowie Bootstrap Icons (MIT-Lizenz).'
+    ]}
+  ],
+  datenschutz: [
+    { h: '1. Verantwortlicher', p: [
+      'Mohamad Noor Ghazal<br><mark>[Straße und Hausnummer]</mark><br><mark>[Postleitzahl]</mark> Oldenburg<br>Deutschland<br>E-Mail: <a href="mailto:mohamad.noor.ghazal@gmail.com">mohamad.noor.ghazal@gmail.com</a><br>Telefon: <a href="tel:+4915906815359" dir="ltr">+49 1590 6815359</a>'
+    ]},
+    { h: '2. Überblick', p: [
+      'Diese Website ist ein persönliches Portfolio. Sie verwendet keine Cookies, kein Tracking, keine Analysewerkzeuge und keine eingebetteten Inhalte von Drittanbietern. Schriften und Icons werden vom selben Server geladen wie die Website. Die gewählte Sprache wird nur in der Adresse der Seite übertragen und nicht in Ihrem Browser gespeichert.'
+    ]},
+    { h: '3. Hosting über GitHub Pages', p: [
+      'Diese Website wird über GitHub Pages bereitgestellt, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website verarbeitet GitHub technisch notwendige Daten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs sowie Angaben zu Browser und Betriebssystem. Diese Daten werden benötigt, um die Website auszuliefern und die Sicherheit des Dienstes zu gewährleisten.',
+      'Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Mein berechtigtes Interesse liegt in einer sicheren und zuverlässigen Bereitstellung dieser Website. Dabei können Daten in die USA übermittelt werden. Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">Datenschutzerklärung von GitHub</a>.'
+    ]},
+    { h: '4. Kontakt per E-Mail oder Telefon', p: [
+      'Wenn Sie mich per E-Mail oder Telefon kontaktieren, verarbeite ich Ihre Angaben (zum Beispiel Name, E-Mail-Adresse, Telefonnummer und den Inhalt Ihrer Nachricht), um Ihre Anfrage zu bearbeiten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, wenn Ihre Anfrage mit einem Vertrag oder vorvertraglichen Maßnahmen zusammenhängt, etwa einem Bewerbungsverfahren. In allen anderen Fällen ist Rechtsgrundlage Art. 6 Abs. 1 lit. f DSGVO, mein berechtigtes Interesse liegt in der Beantwortung Ihrer Anfrage.',
+      'Mein E-Mail-Postfach wird bei Google (Gmail) betrieben. E-Mails an mich werden daher auch auf Servern von Google verarbeitet.',
+      'Ich lösche Ihre Daten, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.'
+    ]},
+    { h: '5. Externe Links', p: [
+      'Diese Website enthält Links zu externen Angeboten, zum Beispiel zu LinkedIn und ng-automobile.de. Daten werden an diese Anbieter erst übertragen, wenn Sie einen Link anklicken. Ab dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters.'
+    ]},
+    { h: '6. Ihre Rechte', p: [
+      'Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Datenübertragbarkeit (Art. 20 DSGVO) und Widerspruch gegen die Verarbeitung (Art. 21 DSGVO). Wenden Sie sich dazu einfach per E-Mail an mich.',
+      'Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel bei der für Niedersachsen zuständigen Behörde, dem Landesbeauftragten für den Datenschutz Niedersachsen.'
+    ]},
+    { h: 'Stand', p: [ 'November 2026' ] }
+  ]
 };
